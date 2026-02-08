@@ -84,8 +84,8 @@
             imgElement.src = steps[step].img;
             mainBtn.innerHTML = steps[step].btn;
             
-            // NO button now appears for Step 2 ("Gusto mo ba humabol") and Step 3 (Valentine question)
-            if (step >= 2) {
+            // NO button ONLY appears on the very last step (Valentine Question)
+            if (step === 3) {
                 noBtn.style.display = 'block';
                 noBtn.style.position = 'relative';
                 noBtn.style.left = 'auto';
@@ -95,13 +95,13 @@
             }
             step++;
         } else {
-            // "YEHEY" Final Step
+            // YEHEY Final Step
             textElement.innerHTML = "YEHEY! ❤️";
             imgElement.src = "https://media.giphy.com/media/TjSPQgowhhJdHgvnwA/giphy.gif";
             mainBtn.style.display = 'none';
             noBtn.style.display = 'none';
             
-            // Play the Happy Happy Happy music
+            // Trigger the Happy Happy Happy music
             happyMusic.play();
         }
     }
