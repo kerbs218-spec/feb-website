@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para kay Idol ❤️</title>
+    <title>wala lang</title>
     <style>
         body {
             background-color: #e6e6ff;
@@ -69,7 +69,7 @@
     const textElement = document.getElementById('text');
     const mainBtn = document.getElementById('mainBtn');
     const noBtn = document.getElementById('noBtn');
-    const happyMusic = document.getElementById('happyMusic');
+    const happyMusic = document.getElementById('happyMusic'); // Reference to the audio
 
     const steps = [
         { text: "SOOOOOOOOOOOO... <br> .....", img: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2d3YWR4djliMnAzb3U3bWVseTc1a2RubTNxamlvM2tpeThlNnlweCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/BNlSrpW0e4nbgVZ2we/giphy.gif", btn: "SO WHAT!" },
@@ -84,7 +84,6 @@
             imgElement.src = steps[step].img;
             mainBtn.innerHTML = steps[step].btn;
             
-            // NO button ONLY appears on the very last step (Valentine Question)
             if (step === 3) {
                 noBtn.style.display = 'block';
                 noBtn.style.position = 'relative';
@@ -95,19 +94,19 @@
             }
             step++;
         } else {
-            // YEHEY Final Step
+            // YEHEY screen
             textElement.innerHTML = "YEHEY! ❤️";
             imgElement.src = "https://media.giphy.com/media/TjSPQgowhhJdHgvnwA/giphy.gif";
             mainBtn.style.display = 'none';
             noBtn.style.display = 'none';
             
-            // Trigger the Happy Happy Happy music
+            // Play the music
             happyMusic.play();
         }
     }
 
     function moveNo() {
-        textElement.innerHTML = "PLEASE??? 🥺<br>Sige na idol!";
+        textElement.innerHTML = "PLEASE??? <br>Sige na idol!";
         imgElement.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2d3YWR4djliMnAzb3U3bWVseTc1a2RubTNxamlvM2tpeThlNnlweCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/901mxGLGQN2PyCQpoc/giphy.gif"; 
         
         noBtn.style.position = 'fixed';
